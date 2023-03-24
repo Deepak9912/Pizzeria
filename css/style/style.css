@@ -1,0 +1,41 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+button:active{
+    padding-left: 2px;
+}
+
+#contact{
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
