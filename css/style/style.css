@@ -1,5 +1,6 @@
 body {
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(183, 182, 190);
+    font-family: 'Fasthand', cursive;
 }
 
 input[type=text],
@@ -22,6 +23,7 @@ button:active{
 }
 
 #contact{
+    background: url("../img/contact.jpeg");
     padding: 30px;
     border-radius: 5px;
     background-color: #f2f2f2;

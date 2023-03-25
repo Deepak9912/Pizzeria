@@ -12,7 +12,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style/style.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
   <title>Pizzeria</title>
 </head>
 
@@ -28,23 +30,24 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#home">Home
+            <a class="nav-link active" href="#home"><i class="fa-solid fa-house">Home</i>
               <span class="visually-hidden">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About us</a>
+            <a class="nav-link" href="#about"><i class="fa-solid fa-address-card">About us</i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#menu">Menu</a>
+            <a class="nav-link" href="#menu"><i class="fa-regular fa-list-dropdown">Menu</i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact us</a>
+            <a class="nav-link" href="#contact"><i class="fa-sharp fa-solid fa-phone">Contact</i></a>
           </li>
         </ul>
         <form class="d-flex">
           <input class="form-control me-sm-2" type="search" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i
+              class="fa-solid fa-magnifying-glass">Search</i></button>
         </form>
       </div>
     </div>
@@ -132,7 +135,7 @@
           <div class="card">
             <img src="./css/img/Pepperoni_240x240.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text fs-2 fw-bold">Pizza Pepperoni</p>
+              <p class="card-text fs-2 fw-bold">Pizza Pepperoni <span class="badge bg-primary">New!</span></p>
               <p class="card-text fw-light"><small> Allergen contents: Cereals containing egg, gluten (wheat flour),
                   milk & mustard.</small></p>
               <p class="card-text fw-bolder">Price: €13.99</p>
@@ -156,7 +159,7 @@
           <div class="card">
             <img src="./css/img/manhatten_250x250.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text fs-2 fw-bold">Manhattan</p>
+              <p class="card-text fs-2 fw-bold">Manhattan <span class="badge bg-primary">Cheapest!</span></p>
               <p class="card-text fw-light"><small> Allergen contents: Cereals containing egg, gluten (wheat flour),
                   milk & mustard.</small></p>
               <p class="card-text fw-bolder">Price: €10.99</p>
@@ -208,13 +211,14 @@
   <!--contact us-->
   <section id="contact">
     <div class="container">
+      <h2 class="text-align-center text-capitalize">Contact us</h2>
       <form action="/action_page.php">
         <div class="row">
           <div class="col-25">
             <label for="name">Full Name</label>
           </div>
           <div class="col-75">
-            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="text" name="name" id="name" placeholder="Name" required>
           </div>
         </div>
 
@@ -223,7 +227,7 @@
             <label for="email">Email</label>
           </div>
           <div class="col-75">
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="Email" required>
           </div>
         </div>
 
@@ -232,7 +236,7 @@
             <label for="number">Phone Number</label>
           </div>
           <div class="col-75">
-            <input type="number" name="number" id="number" placeholder="Number">
+            <input type="number" name="number" id="number" placeholder="Number" required>
           </div>
         </div>
 
@@ -250,8 +254,18 @@
     </div>
   </section>
   <!--contact us ends-->
+  <!--footer-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 text-center text-capitalize">Info</div>
+      <div class="col-sm-6 col-md-4 text-center text-capitalize">Links</div>
+      <div class="col-sm-6 col-md-4 text-center text-capitalize">Number</div>
+    </div>
+  </div>
+  <!--footer ends-->
 
-
+  <!--font awesome icons-->
+  <script src="https://kit.fontawesome.com/f9b7e24f28.js" crossorigin="anonymous"></script>
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
