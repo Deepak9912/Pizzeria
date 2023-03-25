@@ -254,15 +254,25 @@
     </div>
   </section>
   <!--contact us ends-->
+  <!--nunmber-->
+  <section id="number">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-6 text-center counter"><h2>50</h2></div>
+        <div class="col-6 text-center counter"><h2>100</h2></div>
+      </div>
+    </div>
+  </section>
+  <!--number ends-->
   <!--footer-->
-  <div class="container">
+  <div class="container-fluid bg-light">
     <div class="row fs-1 p-3">
       <div class="col-sm-6 col-md-4 text-center text-capitalize"><a href="https://facebook.com" target="_blank"><i
             class="fab fa-facebook"></i></a></div>
       <div class="col-sm-6 col-md-4 text-center text-capitalize"><a href="https://instagram.com" target="_blank"><i
-        class="fab fa-instagram"></i></a></div>
+            class="fab fa-instagram"></i></a></div>
       <div class="col-sm-6 col-md-4 text-center text-capitalize"><a href="https://linkedin.com" target="_blank"><i
-        class="fab fa-linkedin"></i></a></div>
+            class="fab fa-linkedin"></i></a></div>
     </div>
   </div>
   <!--footer ends-->
@@ -273,10 +283,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-  <script src="./java/script.js">
-    console.log('hello world!')
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+    integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+    integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script>
+    $('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
   </script>
-
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
