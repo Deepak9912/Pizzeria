@@ -30,18 +30,18 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#home"><i class="fa-solid fa-house">Home</i>
+            <a class="nav-link active" href="#home">
               <span class="visually-hidden">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about"><i class="fa-solid fa-address-card">About us</i></a>
+            <a class="nav-link" href="#about">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#menu"><i class="fa-regular fa-list-dropdown">Menu</i></a>
+            <a class="nav-link" href="#menu">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact"><i class="fa-sharp fa-solid fa-phone">Contact</i></a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -90,10 +90,10 @@
   <!--carousel section ends-->
   <!--about us-->
   <section id="about">
+    <h2 class="text-center text-capitalize text-underline">About us!</h2>
     <div class="container p-3">
       <div class="row justify-content-center h-50">
         <div class="col-md-12 col-lg-6">
-          <h2 class="slide-right">About us!</h2>
           <p>
             The growth in the American Pizza market in 1986 was what initially grabbed our attention. By 1995, Pizza was
             still the number one growth sector in the fast food industry. This decade of sustained growth in the U.S.A
@@ -212,13 +212,13 @@
   <section id="contact">
     <div class="container">
       <h2 class="text-center text-capitalize">Contact us</h2>
-      <form action="/action_page.php">
+      <form action="#" class="contact-form">
         <div class="row">
           <div class="col-25">
             <label for="name">Full Name</label>
           </div>
           <div class="col-75">
-            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="text" name="name" id="name" placeholder="Name" class="name" required>
           </div>
         </div>
 
@@ -227,7 +227,7 @@
             <label for="email">Email</label>
           </div>
           <div class="col-75">
-            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="email" name="email" id="email" placeholder="Email" class="email" required>
           </div>
         </div>
 
@@ -236,7 +236,7 @@
             <label for="number">Phone Number</label>
           </div>
           <div class="col-75">
-            <input type="number" name="number" id="number" placeholder="Number" required>
+            <input type="number" name="number" id="number" placeholder="Number" class="number" required>
           </div>
         </div>
 
@@ -245,7 +245,8 @@
             <label for="subject">Subject</label>
           </div>
           <div class="col-75">
-            <textarea name="subject" id="subject" placeholder="Type your query" style="height: 200px;"></textarea>
+            <textarea name="subject" id="subject" placeholder="Type your query" class="msg"
+              style="height: 200px;"></textarea>
           </div>
         </div>
 
@@ -299,7 +300,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
     integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--smtp email-->
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <!--counter js-->
+  <script>
+    function sednMsg(e) {
+      e.preventDefault();
+      const contact_Form = document.querySelector('.contact-form');
+      const name = document.querySelector('.name');
+      const email = document.querySelector('.email');
+      const number = document.querySelector('.number');
+      const message = document.querySelector('.msg');
 
+      //send email
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "pizzeria",
+        Password: "qmxkdznclwczmhtd",
+        To: 'deepaksinghj72@gmail.com',
+        From: "email.value",
+        Subject: "This is the subject",
+        Body: "msg.value"
+      }).then(
+        message => alert(message)
+      );
+    }
+
+    form.addeventListener('submit', sednMsg )
+  </script>
   <script>
     $('.counter').counterUp({
       delay: 10,
